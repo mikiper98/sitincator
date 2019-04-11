@@ -4,6 +4,13 @@ import Button from './button';
 import { humanReadableDuration, timeToEvent } from './../util';
 import { MILLISECONDS_PER_MINUTE } from './../constants';
 
+var Gpio = require('onoff').Gpio; 
+var LED1 = new Gpio(4, 'out'), 
+  LED2 = new Gpio(17, 'out'); 
+
+LED1.writeSync(0); 
+LED2.writeSync(1); 
+
 const freeStatusSubMessage = (nextEvent) => {
   const remainingTime = humanReadableDuration(timeToEvent(nextEvent));
   return `for the next ${remainingTime}`;
