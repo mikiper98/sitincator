@@ -56,8 +56,8 @@ export default class Status extends Component {
         key={1}
       /> :
       <Free
-        onClick15={() => onQuickReservation(15)}
-        onClick30={() => onQuickReservation(30)}
+        onClick15={() => onQuickReservation(30)}
+        onClick30={() => onQuickReservation(60)}
         nextEvent={nextEvent}
         key={1}
       />;
